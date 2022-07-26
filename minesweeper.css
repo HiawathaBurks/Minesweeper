@@ -1,0 +1,73 @@
+BODY {
+	  text-align: center;
+}
+H1{
+text-align:center;
+font-family: courier new;
+font-size: 20pt;
+font-weight:normal;
+}
+.minesweeper-board {
+	border: 2px solid #000;
+	margin: 2em;
+	display: inline-block;
+	border-radius: 4px;
+	padding: 1px;
+	font: 14px sans-serif;
+	text-align: center; 
+ }
+.minesweeper-board .row .cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+    box-sizing: border-box;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    background: #ccc;
+    color: #4444ff;
+    cursor: default;
+}
+.minesweeper-board .row .cell:last-child {
+    border-right: 1px solid #aaa;
+}
+.minesweeper-board .row .cell.uncovered {
+    background: transparent; 
+}
+.minesweeper-board .row .cell.fail {
+    color: #f00 !important; 
+}
+.minesweeper-board .row .cell.flagged {
+    color: #00f; 
+  }
+.minesweeper-board .row .cell.flagged:after {
+    content: "\2691"; 
+}
+.minesweeper-board .row .cell.bomb {
+    color: #222; 
+}
+.minesweeper-board .row .cell.bomb:after {
+    content: "\01F4A3"; 
+}
+.minesweeper-board .row .cell.bomb.flagged {
+    color: #3a3; 
+}
+.minesweeper-board .row .cell.careful {
+    color: #c22;
+    font-weight: bold; 
+}
+.minesweeper-board .row .cell.ready {
+    color: #2c2;
+    font-weight: bold; 
+}
+.minesweeper-board .row .cell.covered:hover {
+    background: #fd8;
+    cursor: pointer; 
+}
+.minesweeper-board .row:last-child .cell {
+    border-bottom: 1px solid #888; 
+}
+.minesweeper-board.finished {
+    background-color: #dfc;
+    border-color: orange; 
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>
+		Minesweeper
+	</title>
+    <link rel="stylesheet" href="minesweeper.css" />
+  </head>
+  <body>
+	<h1>
+		Minesweeper
+	</h1>
+	<h2>
+		You may start at any time you wish.
+	</h2>
+	<h3>
+		Red means impossible prediction of bomb. Green means possible bomb prediction.
+	</h3>
+    <script src="minesweeper.js"></script>
+    <script id = "grid">
+		var board = new Minesweeper(20, 20);
+		var div = document.createElement("div");
+		div.innerHTML = board.render();
+		document.body.appendChild(div);
+    </script>
+	<BUTTON onclick="location.reload();">Reset Game</BUTTON>
+  </body>
+</html>
